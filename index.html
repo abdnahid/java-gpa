@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+  <section class="gpa">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <label for="demo" class="label">Obtained Marks:</label>
+                <input placeholder="Type here" id="demo" class="form-control" onkeyup="GPA()"></input>
+                <p id="display"></p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <script>
+
+        document.getElementById('display').style.color="#fff";
+        document.getElementById('display').innerHTML= "Your Marks should be in between 0 to 100";
+          var aplus = "A+";
+          var a="A";
+          var aminus="A-";
+          var b="B";
+          var c="C";
+          var d="D";
+          var f="F";
+        function GPA(){
+          var result = document.getElementById('demo').value;
+
+          if(result>= 80){
+            document.getElementById('display').innerHTML= aplus;
+          }
+          else if (result>= 70){
+            document.getElementById('display').innerHTML= a;
+          }
+          else if (result>= 60){
+            document.getElementById('display').innerHTML= aminus;
+          }
+          else if (result>= 50){
+            document.getElementById('display').innerHTML= b;
+          }
+          else if (result>= 40){
+            document.getElementById('display').innerHTML= c;
+          }
+          else if (result>= 33){
+            document.getElementById('display').innerHTML= d;
+          }
+          else{
+            document.getElementById('display').innerHTML= f;
+          }
+          }
+    </script>
+
+</body>
+</html>
